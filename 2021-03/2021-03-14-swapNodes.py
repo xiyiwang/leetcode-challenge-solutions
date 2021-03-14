@@ -13,3 +13,25 @@ Constraints:
 - 0 <= Node.val <= 100
 """
 
+# Definition for singly-linked list.
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+# Runtime - 1056 ms (faster than 81.75%)
+class Solution:
+    def swapNodes(self, head: ListNode, k: int) -> ListNode:
+        n = 0
+        node = head
+        while node:
+            if n == k-1: l = node
+            node = node.next
+            n += 1
+        
+        r = head
+        for m in range(n-k):
+            r = r.next
+        
+        l.val, r.val = r.val, l.val
+        return head
