@@ -32,11 +32,3 @@ from collections import Counter
 def reorderedPowerOf2_3(N):
     count = Counter(str(N))
     return any(count == Counter(str(1<<b)) for b in range(31))
-
-# N = 1 # True
-# N = 10 # False
-# N = 16 # True
-N = 24 # False
-# N = 46 # True
-
-print(reorderedPowerOf2_3(N))
