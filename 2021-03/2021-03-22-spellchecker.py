@@ -103,13 +103,4 @@ def spellchecker2(wordlist, queries):
         return ""
     
     return map(solve, queries)
-
-
-wordlist = ["KiTe","kite","hare","Hare"]
-queries = ["kite","Kite","KiTe","Hare","HARE","Hear","hear","keti","keet","keto"]
-#         ["kite","KiTe","KiTe","Hare","hare","",    "",    "KiTe","",    "KiTe"]
-
-# wordlist = ["YellOw"]
-# queries = ["yollow"]
-
-print(spellchecker2(wordlist, queries))
+    
