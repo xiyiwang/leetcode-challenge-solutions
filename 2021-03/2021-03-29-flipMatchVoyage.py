@@ -25,6 +25,7 @@ class TreeNode:
         self.left = left
         self.right = right
 
+# dfs approach: 40 ms (faster than 27.12%)
 def flipMatchVoyage(self, root, voyage):
     self.ans = []
     self.i = 0
